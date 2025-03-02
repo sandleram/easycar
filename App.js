@@ -1,9 +1,10 @@
-import Home from './src/screens/home/home.jsx';
-import Passager from './src/screens/passager/passager.jsx';
+import Routes from "./src/routes";
+// import Home from './src/screens/home/home.jsx';
+// import Passager from './src/screens/passager/passager.jsx';
 
 export default function App() {
   return (<>
-    <Home />
+    <Routes />
   </>
   );
     
