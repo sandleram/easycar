@@ -3,14 +3,49 @@ import MyButton from "../../components/mybutton/mybutton.jsx";
 import MapView, { Marker, PROVIDER_DEFAULT } from "react-native-maps";
 import { styles } from "./ride_details.style.js";
 import icons from "../../constants/icons.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function RideDetails(props) {
   const [myLocation, setMyLocation] = useState({
     latitude: 20,
     longitude: 20,
   });
-  
+
+
+  const rideId = props.route.params.rideId;
+  const userId = props.route.params.userId;
+  const [title,setTitle] = useState("");
+  const [ride,setRide] = useState({});
+
+  async function RequestRideDetail() {
+
+  }
+
+  async function AcceptRide() {
+    const json = {
+      driver_user_id: userId,
+      ride_id: rideId,
+    };
+
+    console.log("Aceitar",json);
+    props.navigation.goBack();
+  }
+
+  async function CancelRide() {
+    const json = {
+      driver_user_id: userId,
+      ride_id: rideId,
+    };
+
+    console.log("Cancelar",json);
+    props.navigation.goBack();
+  }
+
+  useEffect(() => {
+    RequestRideDetail();
+  },[]);
+
+
 
   return (
     <View style={styles.container}>
@@ -43,7 +78,7 @@ export default function RideDetails(props) {
           <Text>Origem</Text>
           <TextInput style={styles.input} />
         </View>
-        <View style={styles.footerFields}>  
+        <View style={styles.footerFields}>
           <Text>Destino</Text>
           <TextInput style={styles.input} />
         </View>
