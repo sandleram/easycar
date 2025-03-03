@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from "./screens/home/home";
 import Passenger from "./screens/passenger/passenger";
 import Ride from "./screens/ride/ride";
+import RideDetails from "./screens/ride-details/ride-details";
 
 
 
@@ -25,7 +26,6 @@ function Routes() {
             <Stack.Screen
                 name="passenger"
                 component={Passenger}
-
                 options={{
                     headerShadowVisible: false,
                     headerTitle: "Passageiro",
@@ -35,10 +35,17 @@ function Routes() {
             <Stack.Screen
                 name="ride"
                 component={Ride}
-
+                options={{
+                    headerTitle: "Viagens Disponíveis",
+                    headerTitleAlign: "center"
+                }}
+            />
+            <Stack.Screen
+                name="ride-details"
+                component={RideDetails}
                 options={{
                     headerShadowVisible: false,
-                    headerTitle: "Ride",
+                    headerTitle: "Detalhes da Viagem",
                     headerTransparent: false
                 }}
             />
