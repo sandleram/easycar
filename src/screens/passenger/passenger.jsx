@@ -100,9 +100,8 @@ export default function Passenger(props) {
     const response = await RequestRideFromUser();
 
     if (!response.ride_id) {
-      // const location = {latitude:-23.561747,longitude:-46.656244};//fictício para busca de localização
-
-      const location = await RequestPermissionAndGetLocation();
+      const location = {latitude:-23.561747,longitude:-46.656244};//fictício para busca de localização
+      // const location = await RequestPermissionAndGetLocation(); // busca por GPS (permissão)
 
       if (location.latitude) {
         setTitle("Encontre a sua carona agora");
