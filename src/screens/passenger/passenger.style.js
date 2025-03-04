@@ -28,5 +28,11 @@ export const styles = {
         borderColor: "#ccc",
         padding:10
     },
+    loading:{
+        flex:1,
+        justifyContent:"center",
+        alignItems:"center"
+    }
+   
     
 }

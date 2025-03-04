@@ -83,7 +83,7 @@ export default function RideDetails(props) {
           <TextInput style={styles.input} />
         </View>
       </View>
-      <MyButton text="ACEITAR" style="text" theme="YELLOW" />
+      <MyButton text="ACEITAR" style="text" theme="default" />
     </View>
   );
 }
