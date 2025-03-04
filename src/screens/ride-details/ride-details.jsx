@@ -12,38 +12,38 @@ export default function RideDetails(props) {
   });
 
 
-  const rideId = props.route.params.rideId;
-  const userId = props.route.params.userId;
-  const [title,setTitle] = useState("");
-  const [ride,setRide] = useState({});
+  // const rideId = props.route.params.rideId;
+  // const userId = props.route.params.userId;
+  // const [title,setTitle] = useState("");
+  // const [ride,setRide] = useState({});
 
   async function RequestRideDetail() {
 
   }
 
-  async function AcceptRide() {
-    const json = {
-      driver_user_id: userId,
-      ride_id: rideId,
-    };
+  // async function AcceptRide() {
+  //   const json = {
+  //     driver_user_id: userId,
+  //     ride_id: rideId,
+  //   };
 
-    console.log("Aceitar",json);
-    props.navigation.goBack();
-  }
+  //   console.log("Aceitar",json);
+  //   props.navigation.goBack();
+  // }
 
-  async function CancelRide() {
-    const json = {
-      driver_user_id: userId,
-      ride_id: rideId,
-    };
+  // async function CancelRide() {
+  //   const json = {
+  //     driver_user_id: userId,
+  //     ride_id: rideId,
+  //   };
 
-    console.log("Cancelar",json);
-    props.navigation.goBack();
-  }
+  //   console.log("Cancelar",json);
+  //   props.navigation.goBack();
+  // }
 
-  useEffect(() => {
-    RequestRideDetail();
-  },[]);
+  // useEffect(() => {
+  //   RequestRideDetail();
+  // },[]);
 
 
 
